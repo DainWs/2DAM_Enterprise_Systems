@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="prue01_facturas_action" name="Factura"
+                     res_model="prue01.factura" />
+
+        <act_window id="prue01_articulos_action" name="Articulos"
+                     res_model="prue01.articulos" />
+        
+        <act_window id="prue01_proveedores_action" name="Proveedores"
+                     res_model="prue01.proveedores" />
+
+        <act_window id="prue01_clientes_action" name="Clientes"
+                     res_model="prue01.clientes" />
+
+        <record id="prue01_factura_view_tree" model="ir.ui.view">
+            <field name="name">Lista de facturas</field>
+            <field name="model">prue01.factura</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="numfac" />
+                    <field name="cliente" />
+                    <field name="lineas" />
+                    <field name="total" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="prue01_factura_view_search" model="ir.ui.view">
+            <field name="name">Busqueda facturas</field>
+            <field name="model">prue01.factura</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="numfac" />
+                    <field name="cliente" />
+                    <field name="lineas" />
+                    <field name="total" />
+                </search>
+            </field>
+        </record>
+
+        <record id="prue01_lineasfactura_view_tree" model="ir.ui.view">
+            <field name="name">Lista de lineas de factura</field>
+            <field name="model">prue01.lineasfactura</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="articulo" />
+                    <field name="cantidad" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="prue01_lineasfactura_view_search" model="ir.ui.view">
+            <field name="name">Busqueda de lineas de factura</field>
+            <field name="model">prue01.lineasfactura</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="articulo" />
+                    <field name="cantidad" />
+                </search>
+            </field>
+        </record>
+
+        <record id="prue01_articulos_view_tree" model="ir.ui.view">
+            <field name="name">Lista de articulos</field>
+            <field name="model">prue01.articulos</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre" />
+                    <field name="descripcion" />
+                    <field name="precio" />
+                    <field name="cantidad" />
+                    <field name="proveedor" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="prue01_articulos_view_search" model="ir.ui.view">
+            <field name="name">Busqueda de articulos</field>
+            <field name="model">prue01.articulos</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="nombre" />
+                    <field name="descripcion" />
+                    <field name="precio" />
+                    <field name="cantidad" />
+                    <field name="proveedor" />
+                </search>
+            </field>
+        </record>
+        
+        <record id="prue01_proveedor_view_tree" model="ir.ui.view">
+            <field name="name">Lista de proveedores</field>
+            <field name="model">prue01.proveedores</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre" />
+                    <field name="direccion" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="prue01_proveedor_view_search" model="ir.ui.view">
+            <field name="name">Busqueda de proveedores</field>
+            <field name="model">prue01.proveedores</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="nombre" />
+                    <field name="direccion" />
+                </search>
+            </field>
+        </record>
+
+        <record id="prue01_cliente_view_tree" model="ir.ui.view">
+            <field name="name">Lista de clientes</field>
+            <field name="model">prue01.clientes</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre" />
+                    <field name="dni" />
+                    <field name="edad" />
+                    <field name="direccion" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="prue01_cliente_view_search" model="ir.ui.view">
+            <field name="name">Busqueda de clientes</field>
+            <field name="model">prue01.clientes</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="nombre" />
+                    <field name="dni" />
+                    <field name="edad" />
+                    <field name="direccion" />
+                </search>
+            </field>
+        </record>
+
+        <menuitem name="Facturacion" id="menu_facturacion" sequence="10" />
+        
+        <menuitem name="Principal" id="menu_principal" parent="menu_facturacion" sequence="10"/>
+        <menuitem name="Facturas" id="menu_facturas" parent="menu_principal" action="prue01_facturas_action" sequence="10"/>
+        <menuitem name="Articulos" id="menu_articulos" parent="menu_principal" action="prue01_articulos_action" sequence="10"/>
+        <menuitem name="Proveedores" id="menu_proveedores" parent="menu_principal" action="prue01_proveedores_action" sequence="10"/>
+        <menuitem name="Clientes" id="menu_clientes" parent="menu_principal" action="prue01_clientes_action" sequence="10"/>
+    </data>
+</odoo>
