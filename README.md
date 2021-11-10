@@ -2,7 +2,7 @@
 
 ## Odoo_Modules
 
-A module example of a shop management.
+A module example of a shop/facturation management.
 
 ### Details
 **name**: facturation <br/>
