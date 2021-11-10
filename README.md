@@ -5,12 +5,12 @@
 A module example of a shop management.
 
 ### Details
-**name**: facturation
-**description**: Una aplicacion de facturacion.
-**author**: Jose Antonio Duarte Perez (DainWs)
-**depends**: ['mail']
-**application**: True
-**data**: ['views/contactos.xml']
+**name**: facturation <br/>
+**description**: Una aplicacion de facturacion. <br/>
+**author**: [Jose Antonio Duarte Perez (DainWs)](https://github.com/DainWs) <br/>
+**depends**: ['mail'] <br/>
+**application**: True <br/>
+**data**: ['views/contactos.xml'] <br/>
 
 ## Python_Serialization
 
